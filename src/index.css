@@ -4,10 +4,25 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
+  color: rgb(0, 0, 0);
   -moz-osx-font-smoothing: grayscale;
+  font-family:'Courier New', Courier, monospace;
+  margin:  0 0 0 0;    
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+    background-color: green;
+    color: yellow;
+}
+
+nav ul {
+  display: flex;
+  
+}
+
+ul li a{
+  text-decoration: none;
+  padding: 0.5rem 1rem;
 }

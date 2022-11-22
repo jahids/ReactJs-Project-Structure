@@ -1,0 +1,74 @@
+{
+  "superheroes": [
+    {
+      "id": 1,
+      "name": "Batman",
+      "alterEgo": "Bruce Wayna"
+    },
+    {
+      "id": 2,
+      "name": "wonder woman",
+      "alterEgo": "klerka"
+    },
+    {
+      "id": 63,
+      "name": "niyeaz",
+      "alterEgo": " hello Wayna"
+    },
+    {
+      "id": 33,
+      "name": "niyeaz",
+      "alterEgo": " hello Wayna"
+    },
+    {
+      "id": 14,
+      "name": "niyeaz",
+      "alterEgo": " hello Wayna"
+    },
+    {
+      "id": 13,
+      "name": "niyeaz",
+      "alterEgo": " hello Wayna"
+    },
+    {
+      "id": 4,
+      "name": "superman5",
+      "alterEgo": " hello Wayna"
+    },
+    {
+      "id": 8,
+      "name": "abdul",
+      "alterEgo": " hello Wayna"
+    },
+    {
+      "id": 9,
+      "name": "abdul",
+      "alterEgo": " hello Wayna"
+    },
+    {
+      "name": "abdul",
+      "alterEgo": "helowin",
+      "id": 64
+    },
+    {
+      "name": "raktim",
+      "alterEgo": "hi",
+      "id": 65
+    },
+    {
+      "name": "jakim",
+      "alterEgo": "jenson",
+      "id": 66
+    },
+    {
+      "name": "billy",
+      "alterEgo": "betson",
+      "id": 67
+    },
+    {
+      "name": "",
+      "alterEgo": "",
+      "id": 68
+    }
+  ]
+}

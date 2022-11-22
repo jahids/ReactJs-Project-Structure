@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import StyleApp from './Component/StyleApp';
+import { BrowserRouter as Router, Route ,Link, Routes} from "react-router-dom";
+import SuperHero from './Component/SuperHero.page';
+import RQSuperHeroes from './Component/RQSuperHeroes.page';
+import Homepage from './Component/Home.page';
+import {
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
+import ParalelQuraies from './Component/ParalelQuraies';
+import InfiniteQuery from './Component/InfiniteQuery';
+const queryClient = new QueryClient();
 
-function App() {
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+<div>
+  
+<QueryClientProvider client={queryClient}>
+ <Router> 
+ <nav>
+    <ul>
+      <li><Link to="/">Home</Link></li>
+      <li><Link to="/super-heroes">Traditinal super hero</Link></li>
+      <li><Link to="/rq-super-heroes">RQ super hero</Link></li>
+      <li><Link to="/peralal">peralal quaries</Link></li>
+      <li><Link to="/infinite">infinite quaries</Link></li>
+    </ul>
+    </nav>
 
-export default App;
+  <Routes>
+    <Route exact path="/" element={<Homepage/>} />
+    <Route exact path="/super-heroes" element={<SuperHero/>} />
+    <Route exact path="/rq-super-heroes" element={<RQSuperHeroes/>} />
+    <Route exact path="/peralal" element={<ParalelQuraies/>} />
+    <Route exact path="/infinite" element={<InfiniteQuery/>} />
+  </Routes>
+</Router>
+</QueryClientProvider>
+</div>
+  )
+};
+
+export default App; 
+
+{/* <StyleApp/> */}
