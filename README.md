@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+React Project Structure
+এবার আমরা রিয়্যাক্ট প্রজেক্ট কিভাবে স্ট্রাকচার করতে হয় সে সম্পর্কে জানবো। তার জন্য আমরা একটা নতুন রিয়্যাক্ট প্রজেক্ট তৈরি করে নিলাম vite এর মাধ্যমে।
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+এরপর src ফোল্ডারের মধ্যে শুধু main.jsx রেখে বাকি সব ডিলিট করে দিবো। এরপর নিচের মতো করে আমরা কিছু ডিরেক্টরি ক্রিয়েট করবো।
 
-## Available Scripts
 
-In the project directory, you can run:
+COPY
 
-### `npm start`
+COPY
+|- src
+  |- main.jsx
+  |- app
+    |- App.jsx
+    |- ...
+  |- components
+    |- UI
+    |- shared
+  |- pages
+    |- ...
+  |- states
+    |- ...
+  |- hooks
+    |- ...
+  |- api
+    |- ...
+  |- routers
+    |- ...
+  |- utils
+    |- ...
+  |- tests
+    |- ...
+    
+    
+app: এই ডিরেক্টরিতে অ্যাপ্লিকেশন সম্পর্কিত রাউট, স্টেট যা যা আছে সব মেইনটেইন করা হবে। এই মুহূর্তে আমাদের লাগবে App.jsx এই ফাইলটি। সেটা আমরা তৈরি করে নিবো। এবং এই অ্যাপ ফাইলটাই আমরা আমাদের main.jsx ফাইলে ইমপোর্ট করবো।
+components: অনেক ধরণের কম্পোনেন্ট দরকার হবে। সেগুলো সব থাকবে এর মধ্যে।
+UI: যেগুলো রিউজেবল UI কম্পোনেন্ট অর্থাৎ যেগুলো styled components দিয়ে বানানো সেগুলো থাকবে এই ফোল্ডারের মধ্যে।
+shared: UI কম্পোনেন্ট ছাড়া অন্য যেসব কম্পোনেন্ট রিউজেবল হবে সেগুলো থাকবে এই ফোল্ডারের মধ্যে।
+pages: একটা অ্যাপ্লিকেশন অনেক পেইজ থাকতে পারে। যদি থাকে সেগুলো থাকবে সব এই ফোল্ডারের মধ্যে।
+states: গ্লোবাল স্টেট ম্যানেজ করা হবে এই ফোল্ডারে। এটা নিয়ে আমাদের কাজ করা হয়নি এখনও। তবে ভবিষ্যতে করবো।
+hooks: আমাদের অনেক হুক দরকার পড়বে। সেগুলো আমরা এই ফোল্ডারে ম্যানেজ করবো।
+api: আমাদের অনেক api নিয়ে কাজ করতে হতে পারে। সেগুলো আমরা এই ডিরেক্টরির মধ্যে করবো।
+routers: যেহেতু অনেকগুলো পেইজ থাকবে, সেহেতু অনেক রাউটার দরকার হবে। সেগুলো এই ফোল্ডারে ম্যানেজ করা হবে।
+utils: যতো ইউটিলিটিজ আছে সব থাকবে এই ফোল্ডারের মধ্যে।
+tests: টেস্টিং করার জন্য কোড এই ফোল্ডারে লেখা হবে।
+মোটামুটি এটুকুই হলো রুট লেভেলের প্রজেক্ট স্ট্রাকচার।
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+এভাবেই যে প্রজেক্ট স্ট্রাকচার করতে হবে তেমন কোনো কথা নেই। নিজের মতো করে যেকোনোভাবে স্ট্রাকচার করা যাবে, যেন কোড সহজে মেইন্টেইন করা যায়।
